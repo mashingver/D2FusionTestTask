@@ -1,0 +1,24 @@
+/*
+ * MenuContent
+ */
+
+@import "../../../assets/styles/utilities/index";
+
+.Menu-content {
+  height: calc(100vh - 60px);
+  overflow: auto;
+  border-top: 1px solid $border-color;
+
+  @include media(min, $tablet-min) {
+    height: calc(100vh - 80px);
+  }
+
+  @include media(min, $desktop-min) {
+    border-top: none;
+  }
+
+  &-container {
+    @include container;
+    padding: 30px 30px 65px 30px;
+  }
+}

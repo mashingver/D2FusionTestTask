@@ -1,0 +1,25 @@
+/*
+ * MenuListItem
+ */
+
+@import "../../../assets/styles/utilities/index";
+
+.Menu-list {
+  &-item {
+    font-size: 22px;
+    line-height: 1.45;
+
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+
+    @include media(min, $tablet-min) {
+      font-size: 26px;
+    }
+  }
+
+  &-link {
+    font: inherit;
+    color: inherit;
+  }
+}

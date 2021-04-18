@@ -1,0 +1,25 @@
+/*
+ * MenuList
+ */
+
+@import "../../../assets/styles/utilities/index";
+
+.Menu-list {
+  &:not(:last-child) {
+    margin-bottom: 40px;
+
+    @include media(min, $desktop-min) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &-label {
+    display: inline-block;
+    font-size: 14px;
+    line-height: 1.45;
+    color: $secondary-text-color;
+    margin-bottom: 10px;
+  }
+
+  &-list {}
+}

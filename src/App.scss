@@ -1,0 +1,17 @@
+/*
+ * App
+ */
+
+@import "assets/styles/utilities/index";
+
+.App {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  padding-top: 60px;
+
+  @include media(min, $tablet-min) {
+    padding-top: 80px;
+  }
+}

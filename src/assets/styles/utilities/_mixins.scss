@@ -1,0 +1,43 @@
+/**
+ * Mixins.
+ */
+
+// Media query
+@mixin media($direction, $breakpoint) {
+  @if ($direction == min) {
+    @media screen and (min-width: $breakpoint) {
+      @content;
+    }
+  } @else {
+    @media screen and (max-width: $breakpoint) {
+      @content;
+    }
+  }
+}
+
+// Position absolute center
+@mixin absoluteCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// Container
+@mixin container {
+  display: block;
+  width: 100%;
+  min-width: $min-container-width;
+  max-width: $max-container-width;
+  padding-left: $gutter;
+  padding-right: $gutter;
+  margin: 0 auto;
+}
+
+@mixin bgIcon($name) {
+  display: inline-block;
+  background-size: 100% 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-image: url('../../../assets/icons/#{$name}.svg');
+}

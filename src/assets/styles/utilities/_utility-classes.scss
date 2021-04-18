@@ -1,0 +1,15 @@
+/**
+ * Utility classes
+ */
+
+.hide-tablet {
+  @include media(max, $tablet-max) {
+    display: none;
+  }
+}
+
+.show-mobile-only {
+  @include media(min, $tablet-min) {
+    display: none;
+  }
+}

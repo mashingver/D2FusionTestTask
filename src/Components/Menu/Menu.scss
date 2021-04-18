@@ -1,0 +1,16 @@
+/*
+ * Menu
+ */
+
+@import "../../assets/styles/utilities/index";
+
+.Menu {
+  background-color: $main-background-color;
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
