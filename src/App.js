@@ -39,30 +39,60 @@ function App() {
 }
 
 function Home() {
-  return <h2>Home</h2>;
+  return (
+    <section className="page">
+      <h2>Home</h2>
+    </section>
+  );
 }
-
 function Catalogue() {
-  return <h2>Catalogue</h2>;
+  return (
+    <section className="page">
+      <h2>Catalogue</h2>
+    </section>
+  );
 }
-
 function DelonghiWorld() {
-  return <h2>DelonghiWorld</h2>;
+  return (
+    <section className="page">
+      <h2>DelonghiWorld</h2>
+    </section>
+  );
 }
 function TelegramBot() {
-  return <h2>TelegramBot</h2>;
+  return (
+    <section className="page">
+      <h2>TelegramBot</h2>
+    </section>
+  );
 }
 function Support() {
-  return <h2>Support</h2>;
+  return (
+    <section className="page">
+      <h2>Support</h2>
+    </section>
+  );
 }
 function ServiceCenters() {
-  return <h2>ServiceCenters</h2>;
+  return (
+    <section className="page">
+      <h2>ServiceCenters</h2>
+    </section>
+  );
 }
 function PrivacyPolicy() {
-  return <h2>PrivacyPolicy</h2>;
+  return (
+    <section className="page">
+      <h2>PrivacyPolicy</h2>
+    </section>
+  );
 }
 function CookiePolicy() {
-  return <h2>CookiePolicy</h2>;
+  return (
+    <section className="page">
+      <h2>CookiePolicy</h2>
+    </section>
+  );
 }
 
 export default App;

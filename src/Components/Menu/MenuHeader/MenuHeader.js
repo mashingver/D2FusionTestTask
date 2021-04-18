@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./MenuHeader.scss";
 
 const MenuHeader = props => {
@@ -9,14 +10,14 @@ const MenuHeader = props => {
     <header className={menuHeaderClasses}>
       <div className="Menu-header-container">
         <div className="Menu-header-container-left">
-          <a className="Menu-logo-link" href="/">
+          <Link className="Menu-logo-link" to="/">
             <span className="Menu-logo-link-icon" />
-          </a>
+          </Link>
           <span className="Menu-phone-link" />
-          <a className="Menu-catalog-link" href="/">
+          <Link className="Menu-catalog-link" to="/catalogue">
             <span className="Menu-catalog-link-icon" />
             <span className="Menu-catalog-link-text">Каталог</span>
-          </a>
+          </Link>
           <div className="Menu-search">
             <span className="Menu-search-icon" />
           </div>

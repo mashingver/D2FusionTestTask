@@ -21,7 +21,9 @@ class Menu extends Component {
 
   componentDidMount() {
     this.unlisten = this.props.history.listen((location, action) => {
-      this.handleMenu();
+      this.setState({
+        menuIsOpened: false
+      });
     });
   }
 

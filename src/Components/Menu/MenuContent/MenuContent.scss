@@ -19,6 +19,7 @@
 
   &-container {
     @include container;
-    padding: 30px 30px 65px 30px;
+    padding-top: 30px;
+    padding-bottom: 65px;
   }
 }

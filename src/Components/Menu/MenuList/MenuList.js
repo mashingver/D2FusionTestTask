@@ -10,8 +10,7 @@ const MenuList = props => {
           return (
             <MenuListItem
               key={`${props.item.categoryLabel}-${index}`}
-              label={categoryListItem.label}
-              linkPath={categoryListItem.linkPath}
+              listItem={categoryListItem}
             />
           );
         })}

@@ -57,6 +57,11 @@
     align-items: center;
     cursor: pointer;
 
+    &:hover,
+    &:focus {
+      color: $main-text-color;
+    }
+
     &-icon {
       @include bgIcon("icon-catalog");
       width: 16px;

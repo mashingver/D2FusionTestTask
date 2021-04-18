@@ -22,3 +22,9 @@ body {
 	min-height: 100%;
 	overflow-x: hidden;
 }
+
+.page {
+	@include container;
+	padding-top: 30px;
+	padding-bottom: 65px;
+}
