@@ -3,7 +3,7 @@ import { withRouter } from "react-router-dom";
 
 import "./Menu.scss";
 
-import { menuArray } from "../../appData";
+import { categoryArray } from "../../appData";
 
 import MenuHeader from "./MenuHeader/MenuHeader";
 import MenuContent from "./MenuContent/MenuContent";
@@ -45,7 +45,10 @@ class Menu extends Component {
           handleMenu={this.handleMenu}
         />
 
-        <MenuContent isOpened={this.state.menuIsOpened} menuArray={menuArray} />
+        <MenuContent
+          isOpened={this.state.menuIsOpened}
+          menuArray={categoryArray}
+        />
       </section>
     );
   }

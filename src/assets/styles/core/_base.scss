@@ -24,7 +24,13 @@ body {
 }
 
 .page {
-	@include container;
-	padding-top: 30px;
-	padding-bottom: 65px;
+	background-color: #fafafa;
+	overflow: auto;
+	height: 100%;
+
+	&-container {
+		@include container;
+		padding-top: 30px;
+		padding-bottom: 65px;
+	}
 }

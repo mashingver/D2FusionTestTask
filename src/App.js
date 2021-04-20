@@ -1,6 +1,14 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.scss";
 import Menu from "./Components/Menu/Menu";
+import CataloguePage from "./Components/Pages/CataloguePage/CataloguePage";
+import DelonghiWorldPage from "./Components/Pages/DelonghiWorldPage/DelonghiWorldPage";
+import TelegramBotPage from "./Components/Pages/TelegramBotPage/TelegramBotPage";
+import SupportPage from "./Components/Pages/SupportPage/SupportPage";
+import ServiceCentersPage from "./Components/Pages/ServiceCentersPage/ServiceCentersPage";
+import PrivacyPolicyPage from "./Components/Pages/PrivacyPolicyPage/PrivacyPolicyPage";
+import CookiePolicyPage from "./Components/Pages/CookiePolicyPage/CookiePolicyPage";
+import HomePage from "./Components/Pages/HomePage/HomePage";
 
 function App() {
   return (
@@ -9,89 +17,32 @@ function App() {
         <Menu />
         <Switch>
           <Route path="/catalogue">
-            <Catalogue />
+            <CataloguePage />
           </Route>
           <Route path="/delonghi-world">
-            <DelonghiWorld />
+            <DelonghiWorldPage />
           </Route>
           <Route path="/telegram-bot">
-            <TelegramBot />
+            <TelegramBotPage />
           </Route>
           <Route path="/support">
-            <Support />
+            <SupportPage />
           </Route>
           <Route path="/service-centers">
-            <ServiceCenters />
+            <ServiceCentersPage />
           </Route>
           <Route path="/privacy-policy">
-            <PrivacyPolicy />
+            <PrivacyPolicyPage />
           </Route>
           <Route path="/cookie-policy">
-            <CookiePolicy />
+            <CookiePolicyPage />
           </Route>
           <Route path="/">
-            <Home />
+            <HomePage />
           </Route>
         </Switch>
       </Router>
     </div>
-  );
-}
-
-function Home() {
-  return (
-    <section className="page">
-      <h2>Home</h2>
-    </section>
-  );
-}
-function Catalogue() {
-  return (
-    <section className="page">
-      <h2>Catalogue</h2>
-    </section>
-  );
-}
-function DelonghiWorld() {
-  return (
-    <section className="page">
-      <h2>DelonghiWorld</h2>
-    </section>
-  );
-}
-function TelegramBot() {
-  return (
-    <section className="page">
-      <h2>TelegramBot</h2>
-    </section>
-  );
-}
-function Support() {
-  return (
-    <section className="page">
-      <h2>Support</h2>
-    </section>
-  );
-}
-function ServiceCenters() {
-  return (
-    <section className="page">
-      <h2>ServiceCenters</h2>
-    </section>
-  );
-}
-function PrivacyPolicy() {
-  return (
-    <section className="page">
-      <h2>PrivacyPolicy</h2>
-    </section>
-  );
-}
-function CookiePolicy() {
-  return (
-    <section className="page">
-      <h2>CookiePolicy</h2>
-    </section>
   );
 }
 

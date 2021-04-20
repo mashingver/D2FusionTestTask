@@ -1,0 +1,16 @@
+/*
+ * CataloguePage
+ */
+
+.CataloguePage {
+  &-links {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  &-link {
+    display: inline-block;
+    margin-right: 10px;
+  }
+}

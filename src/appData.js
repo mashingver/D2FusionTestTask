@@ -1,4 +1,4 @@
-const menuArray = [
+const categoryArray = [
   {
     categoryLabel: "Наши товары",
     categoryList: [
@@ -43,30 +43,10 @@ const menuArray = [
         linkPath: "/catalogue/home-appliances",
         subcategories: [
           {
-            label: "Капсульные кофемашины",
-            linkPath: "/catalogue/home-appliances/capsule-coffee-machines",
-            imageName: "capsule-coffee-machines.jpg"
-          },
-          {
-            label: "Кофемолки",
-            linkPath: "/catalogue/home-appliances/coffee-grinders",
-            imageName: "coffee-grinders.jpg"
-          },
-          {
-            label: "Кофеварки",
-            linkPath: "/catalogue/home-appliances/coffee-makers",
-            imageName: "coffee-makers.jpg"
-          },
-          {
-            label: "Грили",
-            linkPath: "/catalogue/home-appliances/grills",
-            imageName: "grills.jpg"
-          },
-          {
-            label: "Электрочайники и тостеры",
+            label: "Подаздел техники для дома",
             linkPath:
-              "/catalogue/home-appliances/electric-kettles-and-toasters",
-            imageName: "electric-kettles-and-toasters.jpg"
+              "/catalogue/home-appliances/home-appliances-placeholder-1",
+            imageName: "capsule-coffee-machines.jpg"
           }
         ]
       },
@@ -75,33 +55,14 @@ const menuArray = [
         linkPath: "/catalogue/accessories",
         subcategories: [
           {
-            label: "Капсульные кофемашины",
-            linkPath: "/catalogue/accessories/capsule-coffee-machines",
+            label: "Подаздел Аксессуаров",
+            linkPath: "/catalogue/accessories/accessories-placeholder-1",
             imageName: "capsule-coffee-machines.jpg"
-          },
-          {
-            label: "Кофемолки",
-            linkPath: "/catalogue/accessories/coffee-grinders",
-            imageName: "coffee-grinders.jpg"
-          },
-          {
-            label: "Кофеварки",
-            linkPath: "/catalogue/accessories/coffee-makers",
-            imageName: "coffee-makers.jpg"
-          },
-          {
-            label: "Грили",
-            linkPath: "/catalogue/accessories/grills",
-            imageName: "grills.jpg"
-          },
-          {
-            label: "Электрочайники и тостеры",
-            linkPath: "/catalogue/accessories/electric-kettles-and-toasters",
-            imageName: "electric-kettles-and-toasters.jpg"
           }
         ]
       }
-    ]
+    ],
+    categoryType: "products"
   },
   {
     categoryLabel: "Мир De’Longhi",
@@ -110,7 +71,8 @@ const menuArray = [
         label: "Мир De’Longhi",
         linkPath: "/delonghi-world"
       }
-    ]
+    ],
+    categoryType: "links"
   },
   {
     categoryLabel: "Поддержка и дополнительная информация",
@@ -127,7 +89,8 @@ const menuArray = [
         label: "Сервисные центры",
         linkPath: "/service-centers"
       }
-    ]
+    ],
+    categoryType: "links"
   },
   {
     categoryLabel: "Сервисные центры",
@@ -140,8 +103,72 @@ const menuArray = [
         label: "Политика использования “Cookies”",
         linkPath: "/cookie-policy"
       }
-    ]
+    ],
+    categoryType: "links"
   }
 ];
 
-export { menuArray };
+const coffeeMachines = [
+  {
+    productName: "De'Longhi Капельная кофеварка ICM16210.WS",
+    productImageName: "coffee-machine.jpg",
+    productPrice: "129 990 ₽",
+    productDiscountAmount: "35 999 ₽",
+    productBonus: "+200 бонусов",
+    productPopular: true,
+    productDiscount: true,
+    productApp: true,
+    productGift: true,
+    productCollection: true
+  },
+  {
+    productName: "De'Longhi Капельная кофеварка ICM16210.WS",
+    productImageName: "coffee-machine.jpg",
+    productPrice: "129 990 ₽",
+    productDiscountAmount: "",
+    productBonus: "+200 бонусов",
+    productPopular: false,
+    productDiscount: false,
+    productApp: true,
+    productGift: true,
+    productCollection: false
+  },
+  {
+    productName: "De'Longhi Капельная кофеварка ICM16210.WS",
+    productImageName: "coffee-machine.jpg",
+    productPrice: "129 990 ₽",
+    productDiscountAmount: "35 999 ₽",
+    productBonus: "+200 бонусов",
+    productPopular: false,
+    productDiscount: true,
+    productApp: false,
+    productGift: true,
+    productCollection: true
+  },
+  {
+    productName: "De'Longhi Капельная кофеварка",
+    productImageName: "coffee-machine.jpg",
+    productPrice: "129 990 ₽",
+    productDiscountAmount: "35 999 ₽",
+    productBonus: "+200 бонусов",
+    productPopular: true,
+    productDiscount: true,
+    productApp: true,
+    productGift: true,
+    productCollection: false
+  },
+  {
+    productName: "De'Longhi Капельная кофеварка",
+    productImageName: "coffee-machine.jpg",
+    productPrice: "129 990 ₽",
+    productDiscountAmount: "35 999 ₽",
+    productBonus: "+200 бонусов",
+    productPopular: true,
+    productDiscount: true,
+    productApp: true,
+    productGift: false,
+    productCollection: false
+  }
+];
+
+export { categoryArray, coffeeMachines };
