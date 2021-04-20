@@ -157,6 +157,8 @@
     display: flex;
     align-items: center;
     cursor: pointer;
+    position: relative;
+    z-index: 2;
 
     &-icon {
       @include bgIcon("icon-menu");

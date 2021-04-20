@@ -1,4 +1,4 @@
-import { Link, Route, Switch, useRouteMatch } from "react-router-dom";
+import { Link, Route, Switch } from "react-router-dom";
 import "./CataloguePage.scss";
 
 import ProductsList from "../../ProductsList/ProductsList";

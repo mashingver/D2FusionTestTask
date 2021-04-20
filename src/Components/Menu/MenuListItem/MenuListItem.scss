@@ -4,22 +4,16 @@
 
 @import "../../../assets/styles/utilities/index";
 
-.Menu-list {
-  &-item {
-    font-size: 22px;
-    line-height: 1.45;
+.MenuListItem {
+  font-size: 22px;
+  line-height: 1.45;
 
-    &:not(:last-child) {
-      margin-bottom: 15px;
-    }
+  &:not(:last-child) {
+    margin-bottom: 15px;
+  }
 
-    @include media(min, $tablet-min) {
-      font-size: 26px;
-    }
-
-    &-with-subcategories {
-
-    }
+  @include media(min, $tablet-min) {
+    font-size: 26px;
   }
 
   &-link {
@@ -30,6 +24,23 @@
     &:focus,
     &:hover {
       color: $active-color;
+    }
+  }
+
+  &-preview {
+    display: none;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    width: 50%;
+    height: 100%;
+    right: 0;
+    top: 0;
+    position: absolute;
+    z-index: 1;
+
+    @include media(min, $desktop-min) {
+      display: block;
     }
   }
 }

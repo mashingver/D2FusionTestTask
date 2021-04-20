@@ -6,8 +6,8 @@ const MenuContent = props => {
 
   if (isOpened) {
     return (
-      <div className="Menu-content">
-        <div className="Menu-content-container">
+      <div className="MenuContent">
+        <div className="MenuContent-container">
           {props.menuArray.map(item => {
             return <MenuList item={item} key={item.categoryLabel} />;
           })}

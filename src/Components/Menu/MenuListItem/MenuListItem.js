@@ -7,15 +7,23 @@ class MenuListItem extends Component {
     super(props);
 
     this.state = {
-      showSubcategories: false
+      showSubcategories: false,
+      showPreview: false
     };
 
     this.toggleSubcategories = this.toggleSubcategories.bind(this);
+    this.togglePreview = this.togglePreview.bind(this);
   }
 
   toggleSubcategories() {
     this.setState({
       showSubcategories: !this.state.showSubcategories
+    });
+  }
+
+  togglePreview() {
+    this.setState({
+      showPreview: !this.state.showPreview
     });
   }
 
@@ -40,18 +48,32 @@ class MenuListItem extends Component {
       );
 
       return (
-        <li className="Menu-list-item Menu-list-item-with-subcategories">
-          <span className="Menu-list-link" onClick={this.toggleSubcategories}>
+        <li className="MenuListItem">
+          <span
+            className="MenuListItem-link"
+            onClick={this.toggleSubcategories}
+            onMouseEnter={this.togglePreview}
+            onMouseLeave={this.togglePreview}
+          >
             {this.props.listItem.label}
           </span>
+          {this.state.showPreview && (
+            <span
+              className="MenuListItem-preview"
+              style={{
+                backgroundImage: `url(${process.env.PUBLIC_URL}/images/${this.props.listItem.previewImageName})`
+              }}
+            />
+          )}
+
           {this.state.showSubcategories && subcategories}
         </li>
       );
     }
 
     return (
-      <li className="Menu-list-item">
-        <Link className="Menu-list-link" to={this.props.listItem.linkPath}>
+      <li className="MenuListItem">
+        <Link className="MenuListItem-link" to={this.props.listItem.linkPath}>
           {this.props.listItem.label}
         </Link>
       </li>

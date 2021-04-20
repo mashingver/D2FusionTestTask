@@ -3,9 +3,9 @@ import MenuListItem from "../MenuListItem/MenuListItem";
 
 const MenuList = props => {
   return (
-    <div className="Menu-list">
-      <span className="Menu-list-label">{props.item.categoryLabel}</span>
-      <ul className="Menu-list-list">
+    <div className="MenuList">
+      <span className="MenuList-label">{props.item.categoryLabel}</span>
+      <ul className="MenuList-list">
         {props.item.categoryList.map((categoryListItem, index) => {
           return (
             <MenuListItem

@@ -4,7 +4,8 @@ const categoryArray = [
     categoryList: [
       {
         label: "Автоматические кофемашины",
-        linkPath: "/catalogue/automatic-coffee-machines"
+        linkPath: "/catalogue/automatic-coffee-machines",
+        previewImageName: "categoryPreview.jpg"
       },
       {
         label: "Техника для кухни",
@@ -36,7 +37,8 @@ const categoryArray = [
               "/catalogue/kitchen-appliances/electric-kettles-and-toasters",
             imageName: "electric-kettles-and-toasters.jpg"
           }
-        ]
+        ],
+        previewImageName: "categoryPreview.jpg"
       },
       {
         label: "Техника для дома",
@@ -48,7 +50,8 @@ const categoryArray = [
               "/catalogue/home-appliances/home-appliances-placeholder-1",
             imageName: "capsule-coffee-machines.jpg"
           }
-        ]
+        ],
+        previewImageName: "categoryPreview.jpg"
       },
       {
         label: "Аксессуары",
@@ -59,7 +62,8 @@ const categoryArray = [
             linkPath: "/catalogue/accessories/accessories-placeholder-1",
             imageName: "capsule-coffee-machines.jpg"
           }
-        ]
+        ],
+        previewImageName: "categoryPreview.jpg"
       }
     ],
     categoryType: "products"
