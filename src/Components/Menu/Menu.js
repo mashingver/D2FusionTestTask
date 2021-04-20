@@ -1,12 +1,9 @@
 import { Component } from "react";
 import { withRouter } from "react-router-dom";
-
-import "./Menu.scss";
-
-import { categoryArray } from "../../appData";
-
 import MenuHeader from "./MenuHeader/MenuHeader";
 import MenuContent from "./MenuContent/MenuContent";
+import { categoryArray } from "../../appData";
+import "./Menu.scss";
 
 class Menu extends Component {
   constructor(props) {

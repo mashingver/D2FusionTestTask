@@ -1,5 +1,5 @@
-import "./MenuContent.scss";
 import MenuList from "../MenuList/MenuList";
+import "./MenuContent.scss";
 
 const MenuContent = props => {
   const isOpened = props.isOpened;

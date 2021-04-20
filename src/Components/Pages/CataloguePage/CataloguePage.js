@@ -1,8 +1,7 @@
 import { Link, Route, Switch } from "react-router-dom";
-import "./CataloguePage.scss";
-
 import ProductsList from "../../ProductsList/ProductsList";
 import { categoryArray, coffeeMachines } from "../../../appData";
+import "./CataloguePage.scss";
 
 const CataloguePage = () => {
   let productGroupsArray;

@@ -33,6 +33,7 @@ const MenuHeader = props => {
           </span>
         </div>
       </div>
+      <span className="Menu-close-control" onClick={props.handleMenu} />
     </header>
   );
 };

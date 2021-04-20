@@ -1,5 +1,5 @@
-import "./ProductList.scss";
 import ProductsListItem from "./ProductsListItem/ProductsListItem";
+import "./ProductsList.scss";
 
 const ProductsList = props => {
   return (

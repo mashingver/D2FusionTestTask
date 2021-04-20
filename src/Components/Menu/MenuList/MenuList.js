@@ -1,5 +1,5 @@
-import "./MenuList.scss";
 import MenuListItem from "../MenuListItem/MenuListItem";
+import "./MenuList.scss";
 
 const MenuList = props => {
   return (

@@ -171,16 +171,20 @@
       }
 
       .Menu-is-opened & {
-        @include bgIcon("icon-close");
-        width: 15px;
-        height: 15px;
-        margin-left: 3px;
+        display: none;
 
-        @include media(min, $tablet-min) {
-          width: 18px;
-          height: 18px;
-          margin-left: 4px;
-        }
+        // Alternative menu close control invariant
+
+        //@include bgIcon("icon-close");
+        //width: 15px;
+        //height: 15px;
+        //margin-left: 3px;
+        //
+        //@include media(min, $tablet-min) {
+        //  width: 18px;
+        //  height: 18px;
+        //  margin-left: 4px;
+        //}
 
         //@include media(min, $desktop-min) {
         //  display: inline-block;
@@ -205,11 +209,41 @@
       }
     }
   }
+
+  &-close-control {
+    @include bgIcon("icon-close");
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    right: 22px;
+    z-index: 2;
+    transform: translateY(-50%);
+    display: none;
+
+    .Menu-is-opened & {
+      display: inline-block;
+    }
+
+    @include media(min, $tablet-min) {
+      width: 18px;
+      height: 18px;
+      right: 28px;
+    }
+
+    @include media(min, $desktop-min) {
+      width: 26px;
+      height: 26px;
+      right: 37px;
+    }
+  }
 }
 
 .Menu-header {
   background-color: $main-background-color;
   height: 60px;
+  position: relative;
 
   @include media(min, $tablet-min) {
     height: 80px;
