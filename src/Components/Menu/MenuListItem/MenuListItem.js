@@ -1,5 +1,6 @@
 import { Component } from "react";
 import { Link } from "react-router-dom";
+import MenuSubcategoryList from "../MenuSubcategoryList/MenuSubcategoryList";
 import "./MenuListItem.scss";
 
 class MenuListItem extends Component {
@@ -28,54 +29,54 @@ class MenuListItem extends Component {
   }
 
   render() {
+    let listItemLink;
+    let subcategories;
+    const imagePreview = (
+      <span
+        className="MenuListItem-preview"
+        style={{
+          backgroundImage: `url(${process.env.PUBLIC_URL}/images/${this.props.listItem.previewImageName})`
+        }}
+      />
+    );
+
     if (this.props.listItem.subcategories) {
-      const subcategories = (
-        <ul className="Category-list">
-          {this.props.listItem.subcategories.map((item, index) => {
-            return (
-              <li className="Category-list-item" key={`${item.label}-${index}`}>
-                <span className="Category-label">{item.label}</span>
-                <img
-                  className="Category-image"
-                  src={`${process.env.PUBLIC_URL}/images/${item.imageName}`}
-                  alt={item.label}
-                />
-                <Link className="Category-link" to={item.linkPath} />
-              </li>
-            );
-          })}
-        </ul>
+      listItemLink = (
+        <span
+          className="MenuListItem-link"
+          onClick={this.toggleSubcategories}
+          onMouseEnter={this.togglePreview}
+          onMouseLeave={this.togglePreview}
+        >
+          {this.props.listItem.label}
+        </span>
       );
 
-      return (
-        <li className="MenuListItem">
-          <span
-            className="MenuListItem-link"
-            onClick={this.toggleSubcategories}
-            onMouseEnter={this.togglePreview}
-            onMouseLeave={this.togglePreview}
-          >
-            {this.props.listItem.label}
-          </span>
-          {this.state.showPreview && (
-            <span
-              className="MenuListItem-preview"
-              style={{
-                backgroundImage: `url(${process.env.PUBLIC_URL}/images/${this.props.listItem.previewImageName})`
-              }}
-            />
-          )}
-
-          {this.state.showSubcategories && subcategories}
-        </li>
+      subcategories = (
+        <MenuSubcategoryList
+          subcategories={this.props.listItem.subcategories}
+        />
+      );
+    } else {
+      listItemLink = (
+        <Link
+          className="MenuListItem-link"
+          to={this.props.listItem.linkPath}
+          onMouseEnter={this.togglePreview}
+          onMouseLeave={this.togglePreview}
+        >
+          {this.props.listItem.label}
+        </Link>
       );
     }
 
     return (
       <li className="MenuListItem">
-        <Link className="MenuListItem-link" to={this.props.listItem.linkPath}>
-          {this.props.listItem.label}
-        </Link>
+        {listItemLink}
+        {this.state.showSubcategories && subcategories}
+        {this.state.showPreview &&
+          !this.state.showSubcategories &&
+          imagePreview}
       </li>
     );
   }
